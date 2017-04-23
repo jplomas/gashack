@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.0.0 - Visit
+ * # Semantic UI 2.1.8 - Visit
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -514,4 +514,4 @@ $.fn.visit.settings = {
 
 };
 
-})( jQuery, window , document );
+})( jQuery, window, document );

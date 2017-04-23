@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.0.0 - Colorize
+ * # Semantic UI 2.1.8 - Colorize
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -44,7 +44,7 @@
           width,
           height,
 
-          // shortcuts
+          // shortucts
           colors    = settings.colors,
           paths     = settings.paths,
           namespace = settings.namespace,
@@ -271,4 +271,4 @@
 
   };
 
-})( jQuery, window , document );
+})( jQuery, window, document );
