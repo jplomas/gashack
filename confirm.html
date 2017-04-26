@@ -164,63 +164,9 @@
 
 <div class="ui main three column grid container">
   <div class="ui container">
-    <h1>Book your place</h1>
-    <div class="ui brown inverted segment"><p>
-      Fill in the form below and click submit.</p><p>We'll be in touch within 48 hours to confirm your registration.</p>
-  </div>
-  <div class="ui raised segments">
-    <div class="ui segment">
-      <div class="ui huge form" id="signup">
-      <div class="field">
-          <label>Name</label>
-          <input placeholder="Full Name" type="text" id="field1">
-      </div>
-      <div class="field">
-          <label>Email</label>
-          <input placeholder="name@domain.com" type="email" id="field2">
-      </div>
-      <div class="grouped fields">
-          <label for="job">I am:</label>
-          <div class="field">
-              <div class="ui radio checkbox job">
-                  <input type="radio" name="job" checked="" tabindex="0" class="hidden" id="Anaesthetist">
-                  <label>An anaesthetist</label>
-              </div>
-          </div>
-          <div class="field">
-              <div class="ui radio checkbox job">
-                  <input type="radio" name="job" tabindex="0" class="hidden" id="Developer">
-                  <label>A developer</label>
-              </div>
-          </div>
-          <div class="field">
-              <div class="ui radio checkbox job">
-                  <input type="radio" name="job" tabindex="0" class="hidden" id="Both">
-                  <label>Both</label>
-              </div>
-          </div>
-          <div class="field">
-              <div class="ui radio checkbox job">
-                  <input type="radio" name="job" tabindex="0" class="hidden" id="Neither">
-                  <label>Neither but interested...</label>
-              </div>
-          </div>
-      </div>
-      <div class="field">
-    <div class="ui toggle checkbox" id="inspired">
-      <input type="checkbox" tabindex="-1" class="hidden" id="#field8">
-      <label>I have a project idea<br><small>Don't worry if you don't!</small></label>
-        </div>
-    </div>
-      <div class="field hidden" id="idea">
-      <label>What's your project idea?</label>
-      <textarea id="field7"></textarea><div class="smallertext">A summary of potential projects will appear on our website. <br>Don't worry if this is rough-and-ready, vague or unformed.</div>
-    </div>
-      <div class="ui submit huge black button">Register</div>
-  </div>
-
-    </div>
-  </div>
+    <h1>Thanks</h1>
+    <p>Your registration has been received.</p>
+    <p>We'll be in touch soon.</p>
   </div>
   </div>
 
@@ -238,17 +184,7 @@
     </div>
     </div>
 
-    <div class="ui modal">
-      <i class="close icon"></i>
-      <div class="header">
-        Please check the form
-      </div>
-      <div class="content" id="err">
-      </div>
-      <div class="actions">
-        <div class="ui close button" onclick="$('.ui.modal').modal('hide');">OK</div>
-      </div>
-    </div>
+
 
 
     </div>
@@ -264,56 +200,6 @@
       $('.ui.modal').modal();
        $('.ui.dropdown').dropdown();
       $('.sidebar').first().sidebar('attach events', '#hamburger', 'show');
-      $('#idea').hide();
-      $('.job').checkbox('set unchecked');
-      $('.ui.toggle').checkbox({
-       onChecked: function() {
-                     $('#idea').show();
-                   },
-       onUnchecked: function() {
-                     $('#idea').hide();
-      }
-                                });
-      $('.submit').on('click', function(){
-
-        // minimum data check
-        var valid = true;
-        var err = '';
-        if ($('#field2').val() == '') {
-          err = err + "No email address entered - we'll need to get in touch!<br><br>";
-          valid = false;
-        }
-        if ($('#field1').val() == '') {
-          err = err + "No name entered - we'll need to know your name to confirm your identity<br><br>";
-          valid = false;
-        }
-        if (valid==false) {
-        $('#err').html(err);
-        $('.ui.modal').modal('show');
-        } else {
-        // all okay, let's submit
-        var foo = $("input[name='job']:checked").prop('id') + ' sign up. ';
-        foo = foo + 'Name: ' + $('#field1').val() + ',  Email: ' + $('#field2').val(); 
-        if ($('#inspired').checkbox('is checked')) {
-          foo = foo + ',  Project idea submitted,  Idea:' + $('#field7').val();
-        }
-        postMessageToSlack(foo);
-        location.href="confirm.html";
-        }
-        
-      });
-      function postMessageToSlack(foo) {
-          var xmlhttp = new XMLHttpRequest();
-          var webhook_url = "https://hooks.slack.com/services/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";
-          var myJSONStr = 'payload= {"username": "gashack", "icon_emoji": ":gift:", "channel": "#signup", "text":"' + foo + '"}';
-          xmlhttp.open('POST', webhook_url, false);
-
-          xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-          xmlhttp.send(myJSONStr);
-      }
-
-
 
     });
 
