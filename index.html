@@ -66,6 +66,10 @@
     #m_btn{
         display:inline-block;
     }
+    .black.row {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
 }
 @media all and (min-width:481px) {
 /* Hide the mobile menu */
@@ -84,12 +88,25 @@
 .masthead {
   min-height: 520px;
   background-color: #000;
-  background-image: url(bg.jpg);
+  background-image: url(images/bg.jpg);
   background-position: center center, center top;
   background-repeat: repeat, no-repeat;
 }
 .masthead img {
 margin-top:80px;
+  }
+  .smallertext{
+    font-size: 60%;
+  }
+  .ui.logos.grid.container {
+    margin-right:0px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .ui.logos.grid.container img {
+    /*max-width: 200px;*/
+    min-width: 50px;
   }
   </style>
 
@@ -101,6 +118,7 @@ margin-top:80px;
       <a href="index.html" class="header item">
         <strong>#gashack</strong>
       </a>
+      <a class="item" href="register.html">Register</a>
       <div class="ui simple dropdown item">
         Event <i class="dropdown icon"></i>
         <div class="menu">
@@ -130,6 +148,7 @@ margin-top:80px;
 
     <div class="ui sidebar inverted vertical menu">
     <a class="item header" href="index.html">#gashack</a>
+    <a class="item" href="register.html">&raquo; Register</a>
     <div class="item">Event</div>
              <a class="item" href="#">&raquo; Venue</a>
         <a class="item" href="#">&raquo; Hotels</a>
@@ -150,20 +169,28 @@ margin-top:80px;
 </div></div>
 
 <!-- <div class="spacer"></div> -->
+<div class="ui logos grid container">
+    <div class="three wide column"><a href="http://www.rcoa.ac.uk"><img width="100%" src="images/rcoa.png"></a></div>
+    <div class="two wide column">&nbsp;</div>
+    <div class="six wide column"><a href="http://www.scata.org.uk"><img width="100%" src="images/scata.png"></a></div>  
+</div>
 
 <div class="masthead">
   <div class="ui two column stackable centered grid">
-    <div class="column">  
-    <img src="gashack.svg" width="90%">
+    <div class="column">
+
+    <img src="images/gashack.svg" width="90%">
     </div>
 <div class="black row">
         <div class="ui white"><p>London<br>Sat/Sun 21/22 Oct 2017</p></div>
 </div>
 <div class="black row">
+  <a href="register.html">
   <button class="ui right labeled brown icon button">
     <i class="right arrow icon"></i>
     Registration open
   </button>
+  </a>
   </div>
   </div>
 </div>
@@ -171,44 +198,54 @@ margin-top:80px;
 
 <div class="ui main three column grid container">
 
-  <div class="ui centered cards">
-    <div class="card">
-      <div class="content">
-        <div class="description">
-          Card
-        </div>
-      </div>
-      <a href="#">
-      <div class="ui bottom attached purple button">
-        Link
-      </div></a>
-    </div>
-    <div class="card">
-      <div class="content">
-        <div class="description">
-          Card
-        </div>
-      </div>
-      <a href="#">
-      <div class="ui bottom attached purple button">
-        Link
-      </div></a>
-    </div>
-    <div class="card">
-      <div class="content">
-        <div class="description">
-          Card
-        </div>
-      </div>
-      <a href="#">
-      <div class="ui bottom attached purple button">
-        Link
-      </div></a>
-    </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu tincidunt urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque porttitor quam ac tincidunt mollis. Pellentesque scelerisque volutpat nisl sed rutrum. Morbi at aliquet purus. Donec euismod at arcu non mollis. Ut vehicula ullamcorper porta. Etiam accumsan faucibus justo accumsan porta. Nullam ornare tincidunt vehicula.</p>
 
+  <p>Fusce consequat sapien id libero aliquam mollis. Sed accumsan aliquet diam, in sodales sem interdum eget. In vel sapien in nibh elementum sodales. Curabitur rutrum lorem eu mauris accumsan viverra. Nunc ut congue lectus. Aenean auctor congue est eget congue. Fusce gravida lobortis justo, ut tincidunt ipsum bibendum at. Nullam lobortis libero metus, sit amet tincidunt mauris pretium sed. Ut congue consectetur libero nec congue. Pellentesque non molestie nisi. Morbi tincidunt eros non purus malesuada, ac bibendum augue pulvinar. Nunc eu felis sed leo pulvinar rhoncus at sed quam.</p>
+
+  <p>Vivamus vel imperdiet odio, a pharetra ante. Nunc at velit eget risus sollicitudin vestibulum a in nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Sed non tortor dignissim, fermentum diam finibus, suscipit ligula. Aliquam laoreet, enim non facilisis luctus, sem nibh mollis libero, vitae lacinia mi dolor nec turpis. In molestie enim quis turpis lobortis dapibus. Nam viverra pulvinar nisl, nec malesuada nisi suscipit sed. Cras fermentum erat tortor, eu scelerisque massa varius fermentum. Sed aliquet magna id posuere eleifend. Quisque commodo vitae sem nec pulvinar. Maecenas placerat eros at nulla placerat mollis. Nulla aliquet, justo id vestibulum volutpat, urna lacus pellentesque nibh, id feugiat erat erat sed libero. Cras ullamcorper erat erat, in convallis turpis bibendum ut. Sed tempus at neque ut maximus.</p>
+
+  <p>In quis justo mauris. Pellentesque porttitor vel quam ac gravida. Praesent scelerisque turpis rutrum laoreet rhoncus. Nullam in imperdiet elit. Curabitur sed scelerisque velit. Quisque quis lectus ac velit tincidunt euismod ut sit amet velit. Maecenas nunc nisi, tempor in ligula non, vulputate pulvinar est. Etiam eget tortor id turpis dapibus rhoncus. Donec luctus, sem in tincidunt tincidunt, odio ante cursus elit, vel interdum turpis neque sed turpis. Proin sapien lorem, molestie a justo id, ultricies mattis nulla.</p>
+
+  <p>Curabitur scelerisque vulputate mattis. Cras tincidunt vulputate turpis elementum finibus. Nulla convallis, libero eu faucibus vehicula, erat diam volutpat eros, non luctus mi eros in purus. Cras accumsan, lorem ac molestie accumsan, mi lorem rhoncus ex, nec vestibulum nulla dolor vel libero. Nam aliquet fermentum viverra. Duis tempus bibendum ipsum vitae volutpat. Mauris fringilla rutrum velit, eget bibendum nunc egestas in. Nam rutrum a neque in vehicula. Sed pretium dictum leo, vel semper lacus posuere eget.</p>
+
+<!--   <div class="ui centered cards">
+    <div class="card">
+      <div class="content">
+        <div class="description">
+          Card
+        </div>
+      </div>
+      <a href="#">
+      <div class="ui bottom attached purple button">
+        Link
+      </div></a>
+    </div>
+    <div class="card">
+      <div class="content">
+        <div class="description">
+          Card
+        </div>
+      </div>
+      <a href="#">
+      <div class="ui bottom attached purple button">
+        Link
+      </div></a>
+    </div>
+    <div class="card">
+      <div class="content">
+        <div class="description">
+          Card
+        </div>
+      </div>
+      <a href="#">
+      <div class="ui bottom attached purple button">
+        Link
+      </div></a>
+    </div>
   
-    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-  </div>
+  </div> -->
+
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
 </div>
 </div>
     <div class="ui inverted vertical footer segment">
@@ -216,7 +253,7 @@ margin-top:80px;
         &copy; The Royal College of Anaesthetists, 2016
       </div> -->
       <div class="ui center aligned container">
-      Questions?<br>Email: <a href="mailto:e-Portfolio@rcoa.ac.uk">jplomas@rcoa.ac.uk</a><br><br>
+      Questions?<br>Email: <a href="mailto:jplomas@rcoa.ac.uk">jplomas@rcoa.ac.uk</a><br><br>
       <a href="http://www.rcoa.ac.uk"><img width=91 src="images/RCoAwhite.png"></a>
     </div>
     </div>
