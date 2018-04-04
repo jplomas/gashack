@@ -14,7 +14,9 @@
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
   },
   "scripts": {
-    "install": "gulp install"
+    "install": "gulp install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "peerDependencies": {
     "better-console": "*",
@@ -52,7 +54,7 @@
     "better-console": "*",
     "del": "^2.0.2",
     "extend": "^3.0.0",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-chmod": "^1.2.0",
     "gulp-clone": "^1.0.0",
@@ -70,21 +72,22 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-print": "^2.0.1",
-    "gulp-prompt": "^0.1.2",
+    "gulp-prompt": "^0.4.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-rtlcss": "^0.1.4",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.1",
-    "jquery": "^2.1.4",
+    "gulp-watch": "^5.0.0",
+    "jquery": "^3.0.0",
     "map-stream": "^0.1.0",
     "merge-stream": "^1.0.0",
     "mkdirp": "^0.5.1",
     "require-dot-file": "^0.4.0",
     "run-sequence": "^1.1.0",
     "wrench": "https://github.com/derekslife/wrench-js/tarball/156eaceed68ed31ffe2a3ecfbcb2be6ed1417fb2",
-    "yamljs": "^0.2.3"
+    "yamljs": "^0.2.3",
+    "snyk": "^1.70.3"
   },
   "devDependencies": {
     "github": "*",
@@ -93,5 +96,6 @@
     "gulp-git": "*",
     "gulp-tap": "*",
     "merge-stream": "*"
-  }
+  },
+  "snyk": true
 }
