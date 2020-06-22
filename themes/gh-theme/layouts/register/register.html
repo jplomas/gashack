@@ -132,13 +132,13 @@
           foo = foo + ',  Project idea submitted,  Idea:' + $('#field7').val();
         }
         postMessageToSlack(foo);
-        location.href="confirm.html";
+        location.href="/confirm";
         }
         
       });
       function postMessageToSlack(foo) {
           var xmlhttp = new XMLHttpRequest();
-          var webhook_url = "https://hooks.slack.com/services/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";
+          var webhook_url = "https://hooks.slack.com/services/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";
           var myJSONStr = 'payload= {"username": "gashack", "icon_emoji": ":gift:", "channel": "#signup", "text":"' + foo + '"}';
           xmlhttp.open('POST', webhook_url, false);
 
