@@ -136,22 +136,25 @@
         }
         
       });
+      
       function postMessageToSlack(foo) {
-          var xmlhttp = new XMLHttpRequest();
-          var webhook_url = "https://hooks.slack.com/services/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";
+        var webhook = '';
+        var client = new XMLHttpRequest();
+        client.open('GET', '/webhook.txt');
+        client.onreadystatechange = function() {
+          if (webhook === '' ) {
+            webhook = client.responseText;
+          }
+                  var xmlhttp = new XMLHttpRequest();
+          var webhook_url = webhook;
           var myJSONStr = 'payload= {"username": "gashack", "icon_emoji": ":gift:", "channel": "#signup", "text":"' + foo + '"}';
           xmlhttp.open('POST', webhook_url, false);
-
           xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
           xmlhttp.send(myJSONStr);
+        }
+        client.send();
       }
-
-
-
     });
-
-
     </script>
 
   </body>
