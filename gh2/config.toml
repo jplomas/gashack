@@ -1,0 +1,4 @@
+baseURL = "http://gashack.scata.org.uk/"
+languageCode = "en-gb"
+title = "#gashack²"
+theme = "gh-theme"
