@@ -140,9 +140,9 @@
       function postMessageToSlack(foo) {
         var webhook = '';
         var client = new XMLHttpRequest();
-        client.open('GET', '/webhook.txt');
-        client.onreadystatechange = function() {
-          if (webhook === '' ) {
+        client.open('GET', '/webhook.txt', null);
+        client.onreadystatechange = function(state) {
+          if (webhook === '' && client.responseText) {
             webhook = client.responseText;
             var xmlhttp = new XMLHttpRequest();
             var webhook_url = webhook;
